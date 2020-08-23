@@ -17,8 +17,8 @@ $city = 'Montreal';
 
     <p>
         Hello my name is <b>
-            <?php echo $name; ?></b> and I <b><?php echo $age; ?></b> years old. <br>
-        I live in the city of <b><?php echo $city; ?></b>.
+            <?= $name; ?></b> and I <b><?= $age; ?></b> years old. <br>
+        I live in the city of <b><?= $city; ?></b>.
     </p>
 </body>
 
