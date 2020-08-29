@@ -3,6 +3,7 @@
  * Class WebPAge is used to output the HTML\CSS page.
  */
 require_once 'global_defines.php';
+require_once 'index.php';
 class Webpage
 {
     public $title = PAGE_DEFAULT_TITLE;
@@ -46,21 +47,29 @@ class Webpage
 
 <body>
     <header>
-        <img src="<?=$this->icon; ?>"
-            alt="<?=COMPANY_NAME; ?>" width="20" height="50">
-        <h1><?=WEB_SITE_NAME; ?>
+
+        <h1><img src="<?=$this->icon; ?>"
+                alt="<?=COMPANY_NAME; ?>" style="width:3% ;">
+            <?=$this->title; ?> -
+            <?=WEB_SITE_NAME; ?>
+
         </h1>
     </header>
     <nav>
+
         <h1>THIS IS THE NAV BAR</h1>
     </nav>
     <main>
+
         <?="$this->content"; ?>
+
     </main>
+    <footer>
+        <h1>This is Footer</h1>
+    </footer>
 </body>
 
 </html>
-
 <?php
 die(); //Stop program
         }

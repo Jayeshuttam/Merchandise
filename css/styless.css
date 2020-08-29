@@ -10,27 +10,29 @@ body {
     height: 100%;
 }
 
+table {
+    border: 1px solid red;
+    display: inline-block;
+    text-align: center;
+}
+
+td:nth-child(even) {
+    background: palevioletred;
+}
+
 main {
-    background-color: orange;
+    background-color: white;
     margin: auto;
-    width: 40%;
-    /* height: 100%; */
+    width: 100%;
+    height: auto;
     border-radius: 5%;
     vertical-align: middle;
     text-align: center;
-    padding: 2%;
-}
-
-div#image {
-    border: solid 2px;
-    padding: 3%;
-    background-color: khaki;
-    width: 80%;
-    margin: auto;
 }
 
 h1 {
-    color: darkred;
+    color: white;
+    background: darkred;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-size: 2vw;
@@ -43,14 +45,39 @@ h2 {
     font-size: 1.5vw;
 }
 
-h4 {
-    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+.product {
+    width: 200px;
+    height: 320px;
+    overflow: auto;
+    border: 1px solid black;
     text-align: center;
-    font-size: 1vw;
-    margin-bottom: 2vw;
+    display: inline-block;
+    margin: 10px;
 }
 
-img {
+.product:hover {
+    background-color: #c0c0c0;
+}
+
+
+/* product image */
+
+.product img {
     width: 100%;
-    margin: auto;
+}
+
+.product .name {
+    font-size: 24px;
+    margin: 0;
+}
+
+.product .description {
+    margin: 0;
+}
+
+.product .price {
+    font-size: 24px;
+    color: red;
+    font-weight: bold;
+    margin: 0;
 }

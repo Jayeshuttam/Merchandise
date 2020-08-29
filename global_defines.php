@@ -4,7 +4,11 @@
  */
 
  //WEBPAGE INFO
-define('WEB_SITE_NAME', 'ElectricScooters.com');
+
+//Define method is always global to everyone.
+//
+// define('WEB_SITE_NAME', 'ElectricScooters.com');
+const WEB_SITE_NAME = 'ElectricScooters.com'; //Works same as define function
 define('PAGE_DEFAULT_TITLE', 'Welcome to ElectricScooters.com');
 define('PAGE_DEFAULT_DESCRIPTION', 'Electric Scooters.com has the widest collections of scooters 
 and bicycles ,new ,used in Montreal');
