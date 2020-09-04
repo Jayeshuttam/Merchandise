@@ -1,4 +1,9 @@
 <?php
+
+if (!isset($index_loaded)) {
+    //prevent loading tools.php
+    die('Direct Access to this file is forbidden');
+}
 /*
  * this file contains all project constants
  */
