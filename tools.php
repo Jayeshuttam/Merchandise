@@ -1,5 +1,6 @@
 <?php
 
+$index_loaded = true;
 if (!isset($index_loaded)) {
     //prevent loading tools.php
     die('Direct Access to this file is forbidden');
@@ -32,18 +33,17 @@ function array_to_ProductTable($product)
 
     $key = array_keys($product[0]);
     $ret .= '<tr>';
-    foreach ($key as $value => $value2) {
-        $ret .= '<td>'.$value2.'</td>';
+    foreach ($key as $value) {
+        $ret .= '<td>'.$value.'</td>';
     }
     $ret .= '</tr>';
-    foreach ($product as $key => $value) {
+    foreach ($product as $key1 => $values) {
         $ret .= '<tr>';
-        foreach ($value as$key2 => $value2) {
+        foreach ($values as $key2 => $value2) {
             $ret .= '
         <td style="background:white">'.$value2.'</td>';
         }
-        $ret .= '
-    </tr>';
+        $ret .= '</tr>';
     }
     $ret .= '</table>';
 
@@ -83,11 +83,11 @@ function crash($code, $message)
  * converts array into select list
  * It has 2 parameters array and name.
  */
-function make_dropDown($array, $name)
+function make_dropDown($array, $name, $prev_values = [])
 {
     $out = '';
 
-    $out .= '<select name="'.$name.' class="btn btn-secondary dropdown-toggle">';
+    $out .= '<select name="'.$name.' class="btn btn-secondary dropdown-toggle" id="'.$name.'">';
     foreach ($array as  $value) {
         $out .= '<option id="'.$value['id'].'" value="'.$value['code'].'">'.$value['name'].'</option>';
     }

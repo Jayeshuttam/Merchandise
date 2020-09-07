@@ -20,8 +20,8 @@ td:nth-child(even) {
 
 main {
     background-color: white;
-    margin: auto;
-    vertical-align: middle;
+    margin: 5px auto;
+    /*vertical-align: middle;*/
     /* text-align: center; */
 }
 
@@ -52,6 +52,10 @@ nav a {
 nav a:hover {
     background: white;
     color: darkred;
+}
+
+li {
+    list-style: none;
 }
 
 h2 {

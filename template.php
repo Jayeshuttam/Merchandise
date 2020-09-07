@@ -26,13 +26,29 @@
     <nav>
 
 
-        <a href="http://w12php/index.php?op=0">Home</a></li>
-        <a href="http://w12php/index.php?op=110">Product List</a></li>
-        <a href="http://w12php/index.php?op=111">Product Catalogue</a></li>
-        <a href="http://w12php/index.php?op=1">Login</a></li>
-        <a href="http://w12php/index.php?op=50">Server logs</a>
+        <a href="http://w12php/index.php?op=0">Home</a>
+        <a href="http://w12php/index.php?op=110">Product List</a>
+        <a href="http://w12php/index.php?op=111">Product Catalogue</a>
+        <?php
+        if (isset($_SESSION['user_name'])) {
+            echo $_SESSION['user_name'];
+            echo  '<a href="http://w12php/index.php?op=5">Logout</a>';
+        } else {
+            echo '<a href="http://w12php/index.php?op=1">Login</a>';
+        }
+         ?>
+        <!-- employees only -->
 
-        </ul>
+        <?php
+        if (isset($_SESSION['user_level']) && $_SESSION['user_level'] == 'employee' && $_SESSION['user_level'] != null) {
+            echo '<a href="http://w12php/index.php?op=50">Server logs</a>';
+            echo'<a href="http://w12php/index.php?op=51">List Users</a>';
+        }
+        ?>
+        <a href="http://w12php/index.php?op=3">Register</a>
+
+
+
     </nav>
     <main style="overflow:auto">
         <h1>
